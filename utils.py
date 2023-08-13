@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 import requests
 
 def common_elements_investmentora():
-    st.set_page_config(page_title="InvestMentora", page_icon=":robot_face:", layout='wide')
+    st.set_page_config(page_title="WM Tool", page_icon=":robot_face:", layout='wide')
     if "datafile" not in st.session_state:
         st.session_state["datafile"] = True
     if "network" not in st.session_state:
