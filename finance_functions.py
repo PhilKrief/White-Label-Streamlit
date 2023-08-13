@@ -133,9 +133,6 @@ def get_daily_stock_portfolio_prices(portfolio, key):
         dfs.append(dum)
 
     merged_df = pd.concat(dfs, axis=1)
-
-
-    merged_df.to_csv("tester_data.csv")
     return merged_df
 
 def get_monthly_stock_portfolio_prices(portfolio, key):
@@ -152,9 +149,6 @@ def get_monthly_stock_portfolio_prices(portfolio, key):
         dfs.append(dum)
 
     merged_df = pd.concat(dfs, axis=1)
-
-
-    merged_df.to_csv("tester_data.csv")
     return merged_df
 
 
