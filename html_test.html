@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Worth Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .subsection {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .category {
+            margin-left: 20px;
+        }
+
+        .account-type {
+            margin-left: 40px;
+        }
+
+        /* Styling for assets and liabilities sections */
+        .assets,
+        .liabilities {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for different subsections */
+        .liquid-assets,
+        .fixed-assets {
+            font-style: italic;
+        }
+
+        .personal,
+        .joint,
+        .corporate {
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Styling for table rows */
+        .table-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+
+        /* Styling for odd rows */
+        .table-row:nth-child(odd) {
+            background-color: #f7f7f7;
+        }
+
+        /* Styling for table cells */
+        .table-cell {
+            flex-basis: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Net Worth Report</h1>
+
+        <div class="section assets">Assets</div>
+        <div class="subsection liquid-assets">Liquid Assets</div>
+        <div class="category personal">Personal</div>
+        <div class="account-type">
+            <div class="table-row">
+                <div class="table-cell">Cash</div>
+                <div class="table-cell">$10,000</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">Investments</div>
+                <div class="table-cell">$50,000</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">Properties</div>
+                <div class="table-cell">$200,000</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">Other</div>
+                <div class="table-cell">$5,000</div>
+            </div>
+        </div>
+
+        <div class="category joint">Joint</div>
+        <div class="account-type">
+            <!-- Add rows for joint assets here -->
+        </div>
+
+        <div class="category corporate">Corporate</div>
+        <div class="account-type">
+            <!-- Add rows for corporate assets here -->
+        </div>
+
+        <div class="subsection fixed-assets">Fixed Assets</div>
+        <div class="category personal">Personal</div>
+        <div class="account-type">
+            <!-- Add rows for personal fixed assets here -->
+        </div>
+
+        <div class="category joint">Joint</div>
+        <div class="account-type">
+            <!-- Add rows for joint fixed assets here -->
+        </div>
+
+        <div class="category corporate">Corporate</div>
+        <div class="account-type">
+            <!-- Add rows for corporate fixed assets here -->
+        </div>
+
+        <!-- Repeat the above structure for the Liabilities section -->
+        
+    </div>
+</body>
+</html>
