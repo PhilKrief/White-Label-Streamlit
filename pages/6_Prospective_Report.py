@@ -32,7 +32,7 @@ st.write("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("<div class='big-font blue-font'>KS Investments</div>", unsafe_allow_html=True)
+st.markdown("<div class='big-font blue-font'>SKS Investments</div>", unsafe_allow_html=True)
 st.markdown("### Prospective Report Prepared for John Doe")
 
 # Section 1: Review of Assets with Updated Design
