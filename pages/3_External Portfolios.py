@@ -22,10 +22,32 @@ start_date = st.sidebar.date_input("Start Date: ")
 end_date = st.sidebar.date_input("End Date: ")
 #key = st.sidebar.text_input("API KEY: ")
 
-df = pd.DataFrame(columns=['Ticker', 'Allocation'],index=np.arange(2))
+available_stocks = get_list_of_stocks(key) 
+available_stocks.loc[0] = ""
+
+
+
+df = pd.DataFrame(columns=['Ticker', 'Allocation'])
+
+
+
+
+with st.form("Stock Allocations"):
+    st.subheader("Please enter a stock and an allocation")
+    col1, col2 = st.columns(2)
+    stock = col1.selectbox("Which stock would you like to add to your portfolio?", available_stocks, help="Select a stock from the list")
+    allocation = col2.number_input("What is the allocation of this stock in your portfolio?", min_value=0, max_value=100, help="Enter a number between 0 and 100")
+   # Define questions and choices
+    submitted = st.form_submit_button("Submit")
+    if submitted:
+        df.loc[len(df), "Ticker"] = stock
+        df.loc[len(df)-1, "Allocation"] = allocation
+
 
 edited_df = st.experimental_data_editor(df, num_rows="dynamic")
+
 tickers = edited_df['Ticker'].tolist()
+
 
 bench = st.selectbox(
     'Which benchmark will you choose ?',

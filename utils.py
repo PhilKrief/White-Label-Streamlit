@@ -28,6 +28,8 @@ def common_elements_investmentora():
         st.session_state['risk_score'] = True
     if 'mandat' not in st.session_state:    
         st.session_state['mandat'] = True
+    if "portfolio" is not True:
+        st.session_state["portfolio"] = True
 
     st.session_state["datafile"] = "Sources - PowerBI Dashboard - GPD_SSD_VMD RandomData.xlsx"
 

@@ -20,6 +20,7 @@ st.title("Net Worth Summary")
 #import net worth data
 df = pd.read_excel("Net Worth Data.xlsx", sheet_name="Sheet1")
 
+
 #Add options for the user to choose from
 option = st.selectbox(
     'Which client would you like to see?',
@@ -179,3 +180,13 @@ styled_html = custom_css + table_html
 
 # Render the styled HTML using st.markdown
 st.markdown(styled_html, unsafe_allow_html=True)
+
+edit_data = st.radio("Would you like to edit the data?", ("Yes", "No"), index=1)  
+
+if edit_data == "Yes":
+    editable_data = st.experimental_data_editor(df)
+
+    submit = st.button("Submit")
+    if submit:
+        editable_data.to_excel("Net Worth Data.xlsx", sheet_name="Sheet1", index=False)
+        st.success("Data successfully updated")

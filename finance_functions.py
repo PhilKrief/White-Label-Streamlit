@@ -337,6 +337,21 @@ def format_percentage(numb):
     return formatted_percentage
 
 ##### Financial Modelling Prep Functions
+def get_list_of_stocks(key):    
+    """gets list of stocks from FMP
+
+    Args:
+        stock (str): Ticker
+
+    Returns:
+        _type_: _description_
+    """
+    url = f'https://financialmodelingprep.com/api/v3/stock/list?apikey={key}'
+    response = requests.get(url)
+    data = response.json()
+    df = pd.DataFrame(data)
+    return df   
+
 def get_news_general(key):
     """gets stock news on a daily basis from FMP
 
